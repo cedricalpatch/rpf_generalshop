@@ -9,14 +9,14 @@ AddEventHandler('sugar:sell', function()
     TriggerEvent('redemrp:getPlayerFromId', _source, function(user)
         local count = data.checkItem(_source, "sugar")
         if count == nil then
-            TriggerClientEvent("redemrp_notification:start", _source, 'No tienes mas tabaco', 5)
+            TriggerClientEvent("redemrp_notification:start", _source, 'You dont have enough Sugar', 5)
         end
         if count >= 10 then
             print(count)
             data.delItem(_source,"sugar", 10)
             TriggerClientEvent('sell:general', _source)
         else
-            TriggerClientEvent("redemrp_notification:start", _source, 'No tienes mas tabaco', 5)
+            TriggerClientEvent("redemrp_notification:start", _source, 'You dont have enough Sugar', 5)
         end   
     end)
 end)
@@ -27,14 +27,14 @@ AddEventHandler('corn:sell', function()
     TriggerEvent('redemrp:getPlayerFromId', _source, function(user)
         local count = data.checkItem(_source, "corn")
         if count == nil then
-            TriggerClientEvent("redemrp_notification:start", _source, 'No tienes mas tabaco', 5)
+            TriggerClientEvent("redemrp_notification:start", _source, 'You dont have enough Corn', 5)
         end
         if count >= 10 then
             print(count)
             data.delItem(_source,"corn", 10)
             TriggerClientEvent('sell:general', _source)
         else
-            TriggerClientEvent("redemrp_notification:start", _source, 'No tienes mas tabaco', 5)
+            TriggerClientEvent("redemrp_notification:start", _source, 'You dont have enough Corn', 5)
         end   
     end)
 end)
@@ -44,14 +44,14 @@ AddEventHandler('tobacco:sell', function()
     TriggerEvent('redemrp:getPlayerFromId', _source, function(user)
         local count = data.checkItem(_source, "tobacco")
         if count == nil then
-            TriggerClientEvent("redemrp_notification:start", _source, 'No tienes mas tabaco', 5)
+            TriggerClientEvent("redemrp_notification:start", _source, 'You dont have enough Tabac', 5)
         end
         if count >= 10 then
             print(count)
             data.delItem(_source,"tobacco", 10)
             TriggerClientEvent('sell:general', _source)
         else
-            TriggerClientEvent("redemrp_notification:start", _source, 'No tienes mas tabaco', 5)
+            TriggerClientEvent("redemrp_notification:start", _source, 'You dont have enough Tabac', 5)
         end   
     end)
 end)
