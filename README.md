@@ -24,9 +24,11 @@ https://github.com/PokeSerGG/redemrp_planting
 
     Add ensure rpf_generalshop in server.cfg
     
-# Credit : https://github.com/cedricalpatch  
+# Credit : 
 
-thank to https://github.com/PokeSerGG and https://github.com/Ktos93 for helping !
+https://github.com/cedricalpatch  
+
+Thank to https://github.com/PokeSerGG and https://github.com/Ktos93 for helping !
     
 
 
