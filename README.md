@@ -1,5 +1,3 @@
-# rpf_generalshop
-
 # RPF Studio Developement
 
 # general shop 1.0
