@@ -6,6 +6,7 @@ Buy all seed you need and waterican for planting work and sell when you have har
 
 WIP Todo :
 
+Add money back when you sell
 Sell gold
 Sell animal
 
