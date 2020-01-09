@@ -1,6 +1,6 @@
 # RPF Studio Developement
 
-# general shop 1.0
+# General shop 1.0
 
 Buy all seed you need and waterican for planting work and sell when you have harvest.
 
@@ -28,7 +28,9 @@ https://github.com/PokeSerGG/redemrp_planting
 
 https://github.com/cedricalpatch  
 
-Thank to https://github.com/PokeSerGG and https://github.com/Ktos93 for helping !
+Thank to :
+
+https://github.com/PokeSerGG and https://github.com/Ktos93 for helping !
     
 
 
