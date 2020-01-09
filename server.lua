@@ -14,7 +14,7 @@ AddEventHandler('sugar:sell', function()
         if count >= 10 then
             print(count)
             data.delItem(_source,"sugar", 10)
-            TriggerClientEvent('sell:general', _source)
+            TriggerClientEvent('sell:sugar', _source)
         else
             TriggerClientEvent("redemrp_notification:start", _source, 'You dont have enough Sugar', 5)
         end   
@@ -32,13 +32,14 @@ AddEventHandler('corn:sell', function()
         if count >= 10 then
             print(count)
             data.delItem(_source,"corn", 10)
-            TriggerClientEvent('sell:general', _source)
+            TriggerClientEvent('sell:corn', _source)
         else
             TriggerClientEvent("redemrp_notification:start", _source, 'You dont have enough Corn', 5)
         end   
     end)
 end)
 
+RegisterServerEvent('tobacco:sell')
 AddEventHandler('tobacco:sell', function()
     local _source = source
     TriggerEvent('redemrp:getPlayerFromId', _source, function(user)
@@ -49,7 +50,7 @@ AddEventHandler('tobacco:sell', function()
         if count >= 10 then
             print(count)
             data.delItem(_source,"tobacco", 10)
-            TriggerClientEvent('sell:general', _source)
+            TriggerClientEvent('sell:tobacco', _source)
         else
             TriggerClientEvent("redemrp_notification:start", _source, 'You dont have enough Tabac', 5)
         end   
@@ -126,4 +127,25 @@ AddEventHandler('rpf:cornseed', function(price, item)
             TriggerClientEvent('Message:cancel', source)
         end
     end)
+end)
+
+RegisterServerEvent('tobacco:paid')
+AddEventHandler('tobacco:paid', function(cash)
+    TriggerEvent('redemrp:getPlayerFromId', source, function(user)
+        user.addMoney(100)
+        end)
+end)
+
+RegisterServerEvent('corn:paid')
+AddEventHandler('corn:paid', function(cash)
+    TriggerEvent('redemrp:getPlayerFromId', source, function(user)
+        user.addMoney(100)
+        end)
+end)
+
+RegisterServerEvent('sugar:paid')
+AddEventHandler('sugar:paid', function(cash)
+    TriggerEvent('redemrp:getPlayerFromId', source, function(user)
+        user.addMoney(100)
+        end)
 end)

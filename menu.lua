@@ -22,22 +22,22 @@ Citizen.CreateThread(function()
             end
             WarMenu.Display()
         elseif WarMenu.IsMenuOpened('buy') then
-            if WarMenu.Button('Buy tabac seed for 10$') then
+            if WarMenu.Button('Buy tabac seed for ~pa~10$') then
                         TriggerServerEvent("rpf:tobaccoseed", 10)  
-            elseif WarMenu.Button('Buy sugarcane seed for 10$') then
+            elseif WarMenu.Button('Buy sugarcane seed for ~pa~10$') then
                         TriggerServerEvent("rpf:sugarcaneseed", 10) 
-            elseif WarMenu.Button('Buy corn seed for 10$') then
+            elseif WarMenu.Button('Buy corn seed for ~pa~10$') then
                         TriggerServerEvent("rpf:cornseed", 10)
-            elseif WarMenu.Button('Buy Waterican for 10$') then
+            elseif WarMenu.Button('Buy Waterican for ~pa~10$') then
                         TriggerServerEvent("rpf:wateringcan", 10)
             end
             WarMenu.Display()
         elseif WarMenu.IsMenuOpened('sell') then
-            if WarMenu.Button('Sell Tabac 10') then
+            if WarMenu.Button('Sell Tabac ~pa~10') then
                 TriggerServerEvent("tobacco:sell")  
-            elseif WarMenu.Button('Sell corn 10') then
+            elseif WarMenu.Button('Sell corn ~pa~10') then
                 TriggerServerEvent("corn:sell")  
-            elseif WarMenu.Button('Sell Sugar 10') then
+            elseif WarMenu.Button('Sell Sugar ~pa~10') then
                 TriggerServerEvent("sugar:sell")  
             end
             WarMenu.Display()
@@ -57,8 +57,21 @@ Citizen.CreateThread(function()
 end)
 
 
-RegisterNetEvent('sell:general')
-AddEventHandler('sell:general', function()
+RegisterNetEvent('sell:tobacco')
+AddEventHandler('sell:tobacco', function()
+    TriggerServerEvent("tobacco:paid")
+    DisplayHelp('You have been sell you stock.')
+end)
+
+RegisterNetEvent('sell:corn')
+AddEventHandler('sell:corn', function()
+    TriggerServerEvent("corn:paid")
+    DisplayHelp('You have been sell you stock.')
+end)
+
+RegisterNetEvent('sell:sugar')
+AddEventHandler('sell:sugar', function()
+    TriggerServerEvent("sugar:paid")
     DisplayHelp('You have been sell you stock.')
 end)
 
